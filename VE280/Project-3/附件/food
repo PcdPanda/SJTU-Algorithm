@@ -1,0 +1,15 @@
+left
+ifwall 9
+hop  fsefze
+infect
+ifempty 9 
+ifenemy 8
+right
+ifwall 7 
+infect
+ifempty 4
+ifsame 1
+go 1
+
+
+Food just sits there and spins but doesn't infect anyone.

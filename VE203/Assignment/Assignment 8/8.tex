@@ -1,0 +1,127 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{geometry}
+\usepackage{enumerate}
+\usepackage{natbib}
+\usepackage{float}%稳定图片位置
+\usepackage{graphicx}%画图
+\usepackage[english]{babel}
+\usepackage{a4wide}
+\usepackage{indentfirst}%缩进
+\usepackage{enumerate}%加序号
+\usepackage{multirow}%合并行
+\title{\large UM-SJTU JOINT INSTITUTE\\DISCRETE MATHEMATICS\\(VE203)\\\ \\\ \\\ \\\ \\\ \\\ \\\ \\\ \\\ \\\ \\\
+ASSIGNMENT 8\\\ \\\ \\\ \\\ \\\ \\\ }
+\author{Name: Pan Chongdan\\ID: 516370910121}
+\date{Date: \today}
+
+
+\begin{document}
+\maketitle
+\newpage
+\section{Q1}
+\begin{enumerate}[(i)]
+\item \textbf{Input}: $a_1,\cdots,a_n,n$ unsorted elements 
+\par \textbf{Output}: All the $a_i,1\leq i\leq n$ in an increasing order.
+
+\par \textbf{for} $p=1$ to $n-1$
+\par $x=a_{p+1};$
+\par \setlength\parindent{2em}\textbf{If} $a_p>a_{p+1}$ \textbf{then}
+\par \setlength\parindent{4em}$i=1;j=p;$
+\par \textbf{while} $i<j$ \textbf{do}
+\par \setlength\parindent{6em}$m\leftarrow\lceil(i+j/2）\rceil;$
+\par \textbf{if} $x>a_m$ \textbf{then} $i\leftarrow(m+1);$
+\par \textbf{else} $j\leftarrow m;$ 
+\par \setlength\parindent{4em}\textbf{end while}
+\par \textbf{for} $k=p$ to $i$
+\par \setlength\parindent{6em}$a_{k+1}=a_k;$
+\par \setlength\parindent{4em}\textbf{end for}
+\par $a_i=x;$
+\par \setlength\parindent{2em}\textbf{end if}
+\par \setlength\parindent{0em}\textbf{end for}
+\par \textbf{return} $(a_1\cdots a_{n+1});$ 
+\item 
+For the Insertion Sort Algorithm, $n=\sum_1^7=28$
+\par For the Binary Insertion Sort Algorithm, $n=1+1+1+2+2+2+3=12$
+\item $f(n)=\sum_1^{n-1}=\frac{n^2-n}{2}$, which is order $n^2$
+\item $f(n)$ is $O(\log_2n)$, which is faster than Insertion Sort.
+\end{enumerate}
+\section{Q2}
+\begin{enumerate}[(i)]
+\item Assume $n=b^k,k=\log_bn$ then 
+$$f(n)=b^d\cdot f(b^{k-1})+cb^{kd}$$
+$$f(n)=b^d\cdot[b^d\cdot f(b^{k-2})+cb^{kd-d}]+cb^{kd}=b^{2d}f(b^{k-2})+2cb^{kd}$$
+$$f(n)=b^{2d}f(b^{k-2})+2cb^{kd}=b^{3d}f(b^{k-3})+3cb^{kd}$$
+$$\cdots$$
+$$f(n)=b^{kd}f(1)+kcn^d=f(1)n^d+cn^d\log_bn$$
+\item Assume $n=b^k,$ where $k=A+B,A\in\mathbb{Z}$ and $0<B<1$, then similarly to (i)
+$$f(n)=f(\frac{n}{b^A})b^{Ad}+Acn^d$$
+$$\lim_{n\to\infty}|\frac{f(n)}{n^d\log_bn}|=c$$
+$$\therefore f\quad\mathrm{is}\quad O(n^d\log_b(n))$$ 
+\item Assume $n=b^k,k=\log_bn$ then
+$$f(n)=a\cdot f(b^{k-1})+cb^{kd}$$
+$$f(n)=a\cdot[a\cdot f(b^{k-2})+cb^{kd-d}]+cb^{kd}=a^2f(b^{k-2})+(1+\frac{a}{b^d})cb^{kd}$$
+$$\cdots$$
+$$f(n)=a^kf(1)+[1+\frac{a}{b^d}\cdots(\frac{a}{b^d})^{k-1}]cb^{kd}=a^kf(1)+\frac{a^k-b^{kd}}{ab^{kd-d}-b^{kd}}\cdot cn^d$$
+$$f(n)=a^kf(1)+c\cdot\frac{b^d(n^d-a^k)}{b^d-a}=a^k\cdot(f(1)+\frac{cb^d}{a-b^d})+c\cdot\frac{b^dn^d}{b^d-a}$$
+$$f(n)=c_1n^d+c_2a^k$$
+$$a^k=a^{\log_nb}=n^{\log_ba}$$
+$$\therefore f(n)=c_1n^d+c_2n^{\log_ba}$$
+\item $$\lim_{n\to\infty}|\frac{f(n)}{n^d}|=|c_1+c_2n^{\log_ba-d}|$$
+$$\because a<b^d\Rightarrow\log_ba-d<0\Rightarrow|c_1+c_2n^{\log_ba-d}|<|c_1+c_2|$$
+$$\therefore f\quad\mathrm{ is }\quad O(n^d)$$
+\item Similarly to last question,
+$$\lim_{n\to\infty}|\frac{f(n)}{n^{log_ba}}|=|c_1n^{d-\log_ba}+c_2|$$
+$$\because a>b^d\Rightarrow\log_ba-d>0\Rightarrow|c_1n^{d-\log_ba}+c_2|<|c_1+c_2|$$
+$$\therefore f\quad\mathrm{ is }\quad O(n^{\log_ba})$$
+\end{enumerate}
+\section{Q3}
+Since there is only on real root then 
+$$a_n=2\alpha a_{n-1}-\alpha^2a_{n-2}$$
+$$2\alpha a_{n-1}-\alpha^2a_{n-2}=2\alpha(q_1\alpha^{n-1}+q_2n\alpha^{n-1})-\alpha^2(q_1\alpha^{n-2}+q_2n\alpha^{n-2})=q_1\alpha^n+q_2n\alpha^n=a_n$$
+\section{Q4}
+$$\lambda^3-2\lambda^2-\lambda+2=0$$
+$$\lambda_1=2,\lambda_2=1,\lambda_1=-1$$
+$$\therefore a_n=q_12^n+q_2+q_3(-1)^n$$
+$$3=q_1+q_2+q_3$$
+$$6=2q_1+q_2-q_3$$
+$$0=4q_1+q_2+q_3$$
+$$q_1=-1,q_2=6,q_3=-2$$
+$$a_n=-2^n+6-2(-1)^n$$
+\section{Q5}
+$$\lambda^2-5\lambda+6=0$$
+$$\lambda_1=2,\lambda_2=3$$
+$$p_n=bn2^n+cn^2+dn+e$$
+$$p_n=5p_{n-1}-6p_{n-2}$$
+$$b=-2,c=1,d=\frac{15}{2},e=\frac{67}{4}$$
+$$a_n=q_12^n+q_23^n-2n2^n+n^2+\frac{15}{2}n+\frac{67}{4}$$
+$$q_1=-33,q_2=\frac{65}{4}$$
+$$a_n=-33\cdot2^n+\frac{65}{4}\cdot3^n-2n2^n+n^2+\frac{15}{2}n+\frac{67}{4}$$
+\section{Q6}
+$$\lambda^3-7\lambda^2+16\lambda-12=0$$
+$$\lambda_1=3,\lambda_2=\lambda_3=2$$
+$$p_n=kn4^n+b4^n$$
+$$kn4^n+b4^n=7k(n-1)4^{n-1}-16k(n-2)4^{n-2}+12k(n-3)4^{n-3}+n4^n+3b4^n$$
+$$k=16,b=-80$$
+$$a_n=q_13^n+q_22^n+q_3n2^n+16n4^n-80\cdot4^n$$
+$$a_n=49\cdot3^n+28\cdot2^n+27.5n2^n+16n4^n+\frac{5}{2}4^n$$
+\section{Q7}
+$$a_{n+1}=a_n+(n+1)^4$$
+$$a_n=an^5+bn^4+cn^3+dn^2+en+f$$
+$$a(n+1)^5+(b-1)(n+1)^4+c(n+1)^3+d(n+1)^2+e(n+1)+f=an^5+bn^4+cn^3+dn^2+en+f$$
+$$a=\frac{1}{5},b=\frac{1}{2},c=\frac{1}{3},d=0,e=-\frac{1}{30},f=0$$
+$$a_n=\frac{n^5}{5}+\frac{n^4}{2}+\frac{n^3}{3}-\frac{n}{30}$$
+\section{Q8}
+$$a_n-b_n=2a_{n-1}\Rightarrow b_n=a_n-2a_{n-1}\Rightarrow a_{n}=5a_{n-1}-4a_{n-2}$$
+$$\lambda^2-5\lambda+4=0$$
+$$\lambda_1=4,\lambda_2=1$$
+$$a_n=q_14^n+q_2\Rightarrow a_n=2\cdot4^{n}-1$$
+$$\therefore b_n=4^n+1$$
+\section{Q9}
+$$\lambda^2-2\lambda+2=0$$
+$$\lambda_1=1+i,\lambda_2=1-i$$
+$$p_n=k3^n\Rightarrow k=\frac{2}{3}k-\frac{2}{9}k+1\Rightarrow k=\frac{9}{5}\Rightarrow p_n=\frac{9}{5}\cdot3^n$$
+$$a_n=(\sqrt{2})^n(q_1\cos\frac{n\pi}{4}+q_2\sin\frac{n\pi}{4})+\frac{9}{5}\cdot 3^n\Rightarrow q_1=-\frac{4}{5},q_2=-\frac{13}{5}$$
+$$a_n=(\sqrt{2})^n(-\frac{4}{5}\cos\frac{n\pi}{4}-\frac{13}{5}\sin\frac{n\pi}{4})+\frac{9}{5}\cdot 3^n$$
+\end{document}

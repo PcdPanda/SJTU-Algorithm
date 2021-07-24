@@ -1,0 +1,265 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{geometry}
+\usepackage{enumerate}
+\usepackage{natbib}
+\usepackage{float}%稳定图片位置
+\usepackage{graphicx}%画图
+\usepackage[english]{babel}
+\usepackage{a4wide}
+\usepackage{indentfirst}%缩进
+\usepackage{enumerate}%加序号
+\usepackage{multirow}%合并行
+\title{\large UM-SJTU JOINT INSTITUTE\\DISCRETE MATHEMATICS\\(VE203)\\\ \\\ \\\ \\\ \\\ \\\ \\\ \\\ \\\ \\\ \\\
+ASSIGNMENT 1\\\ \\\ \\\ \\\ \\\ \\\ }
+\author{Name: Pan Chongdan\\ID: 516370910121}
+\date{Date: \today}
+
+
+\begin{document}
+\maketitle
+\newpage
+\section{Q1}
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|c|c|c|c|c|c|}
+\hline
+A & B &$\neg$(A$\wedge$B)  &($\neg$A$\vee\neg$B)  &$\neg$(A$\wedge$B)$\Leftrightarrow$($\neg$A$\vee\neg$B)  &$\neg$(A$\vee$B)  &($\neg$A$\wedge\neg$B)  &$\neg$(A$\vee$B)$\Leftrightarrow$($\neg$A$\wedge\neg$B)  \\ \hline
+T & T &F  &F  &T  &F  &F  &T  \\ \hline
+T & F &T &T  &T  &F  &F  &T  \\ \hline
+F & T &T  &T  &T  &F  &F &T  \\ \hline
+F & F &T  &T  &T  &T  &T  &T  \\ \hline
+\end{tabular}
+\caption{Truth Table}
+\end{table}
+\section{Q2}
+\begin{enumerate}
+\item
+$$A\cap B\Leftrightarrow\{x|x\in A\wedge x\in B\}$$
+$$M\setminus(A\cap B)\Leftrightarrow\{ x|x\in M\wedge (x\notin (A\cap B)\} $$\\
+$$M\setminus A\Leftrightarrow\{x|x\in M\wedge x\notin A \}$$
+$$M\setminus B\Leftrightarrow\{x|x\in M\wedge x\notin B \}$$
+$$(M\setminus A)\cup(M\setminus B)\Leftrightarrow\{x|(x\in M\wedge x\notin A)\vee (x\in M\wedge x\notin B)\}$$
+$$\Leftrightarrow\{x|x\in M\wedge (x\notin A\vee x\notin B)\}\Leftrightarrow\{x|x\in M\wedge (x\notin (A\cap B)\}$$
+$$\therefore M\setminus(A\cap B)=(M\setminus A)\cup(M\setminus B)$$
+\item
+$$A\cup B\Leftrightarrow\{x|x\in A\vee x\in B\}$$
+$$M\setminus(A\cup B)\Leftrightarrow\{ x|x\in M\wedge x\notin A\wedge x\notin B\}$$\\
+$$M\setminus A\Leftrightarrow\{x|x\in M\wedge x\notin A \}$$
+$$M\setminus B\Leftrightarrow\{x|x\in M\wedge x\notin B \}$$
+$$(M\setminus A)\cap(M\setminus B)\Leftrightarrow\{ x|(x\in M\wedge x\notin A)\wedge(x\in M\wedge x\notin B\} $$
+$$\Leftrightarrow\{ x|x\in M\wedge x\notin A\wedge x\notin B\}$$
+$$\therefore M\setminus(A\cup B)=(M\setminus A)\cap(M\setminus B)$$
+\end{enumerate}
+
+\section{Q3}
+\begin{enumerate}[(i)]
+\item
+(A$\Rightarrow$(B$\Rightarrow$C))$\Rightarrow$(B$\Rightarrow$(A$\Rightarrow$C)) is a tautology.
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+A & B &C  &A$\Rightarrow$(B$\Rightarrow$C) &B$\Rightarrow$(A$\Rightarrow$C)&(A$\Rightarrow$(B$\Rightarrow$C))$\Rightarrow$(B$\Rightarrow$(A$\Rightarrow$C)) \\ \hline
+T & T &T  &T  &T  &T\\ \hline
+T & T &F  &F  &F  &T \\ \hline
+T & F &T  &T  &T  &T\\ \hline
+T & F &F  &T  &T  &T\\ \hline
+F & T &T  &T  &T  &T\\ \hline
+F & T &F  &T  &T  &T \\ \hline
+F & F &T  &T  &T  &T\\ \hline
+F & F &F  &T  &T  &T\\ \hline
+\end{tabular}
+\caption{Truth Table}
+\end{table}
+\item
+((A$\vee$B)$\wedge$(A$\vee$C))$\Rightarrow$(B$\vee$C) is not a tautology.
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+A & B &C  &(A$\vee$B)$\wedge$(A$\vee$C)&B$\vee$C&((A$\vee$B)$\wedge$(A$\vee$C))$\Rightarrow$(B$\vee$C) \\ \hline
+T & T &T  &T  &T  &T\\ \hline
+T & T &F  &T  &T  &T \\ \hline
+T & F &T  &T  &T  &T\\ \hline
+T & F &F  &T  &F  &F\\ \hline
+F & T &T  &T  &T  &T\\ \hline
+F & T &F  &F  &T  &T \\ \hline
+F & F &T  &F  &T  &T\\ \hline
+F & F &F  &F  &F  &T\\ \hline
+\end{tabular}
+\caption{Truth Table}
+\end{table}
+\item
+A$\Rightarrow$($\neg$B)$\Rightarrow$B$\Rightarrow$($\neg$A) is a tautology.
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+A & B &A$\Rightarrow$($\neg$B)&B$\Rightarrow$($\neg$A)&A$\Rightarrow$($\neg$B)$\Rightarrow$B$\Rightarrow$($\neg$A) \\ \hline
+T & T &F  &F  &T  \\ \hline
+T & F &T  &T  &T  \\ \hline
+F & T &T  &T  &T  \\ \hline
+F & F &T  &T  &T  \\ \hline
+\end{tabular}
+\caption{Truth Table}
+\end{table}
+\end{enumerate}
+\section{Q4}
+Since we need to take the disjunction of conjunctions of the variables or their negations, there must at least two variables. If the disjunctive normal form of the first two variables is true, then we don't need to consider the remaining part. The proposition can be 
+$$(A_1\wedge A_2)\vee (\neg A_1\wedge\neg A_2)\vee (\neg A_1\wedge A_2)\vee (A_1\wedge\neg A_2)\vee \cdots$$
+It is always true no matter what the remaining part is.
+\section{Q5}
+\begin{enumerate}
+\item
+$$A\wedge B\Leftrightarrow\neg((\neg A)\vee(\neg B))$$
+\item
+$$A\Rightarrow B\Leftrightarrow(\neg A)\vee B$$
+\item
+$$A\Leftrightarrow B\Leftrightarrow(\neg((\neg A)\vee(\neg B)))\vee(\neg(A\vee B))$$
+\end{enumerate}
+\section{Q6}
+\begin{enumerate}[(i)]
+\item
+$$X\bigtriangleup Y=(X\cup Y)\setminus (X\cap Y)$$
+$$(X\cup Y)\setminus (X\cap Y)=(X\setminus  (X\cap Y ))\cup (Y\setminus (X\cap Y))$$
+$$X\setminus  (X\cap Y )\Leftrightarrow\{x|x\in X\wedge\neg(x \in X\wedge x \in Y)\}\Leftrightarrow\{x|x\in X\wedge (x \notin X\vee x \notin Y)\}$$
+$$\Leftrightarrow\{x|(x\in X\wedge x\notin X)\vee (x\in X\wedge x\notin Y)\}\Leftrightarrow\{x|(x\in X\wedge x\notin Y)\}\Leftrightarrow X\setminus Y$$
+Similarly,$$Y\setminus (X\cap Y)=Y\setminus X$$
+$$(X\setminus  (X\cap Y ))\cup (Y\setminus (X\cap Y))\Leftrightarrow(X\setminus Y)\cup (Y\setminus X)$$
+$$\therefore X\bigtriangleup Y=(X\setminus Y)\cup (Y\setminus X) $$
+\item
+$$(M\setminus X)\bigtriangleup(M\setminus Y)=((M\setminus X)\setminus (M\setminus Y))\cup ((M\setminus Y)\setminus (M\setminus X))$$
+$$(M\setminus X)\setminus (M\setminus Y)\Leftrightarrow\{x|(x\in M\wedge \neg x\in X)\wedge\neg(x\in M\wedge \neg x\in Y)\}$$
+$$\Leftrightarrow\{x|(x\in M\wedge \neg x\in X)\wedge(\neg x\in M\vee x\in Y)\}\Leftrightarrow\{x|x\in M\wedge x\in Y\wedge \neg x\in X\}\Leftrightarrow Y\setminus X$$
+Similarly,$$(M\setminus Y)\setminus (M\setminus X)=X\setminus Y$$
+$$\therefore (M\setminus X)\bigtriangleup(M\setminus Y)=(Y\setminus X)\cup (X\setminus Y)=X\bigtriangleup Y$$
+\item 
+$$X\setminus Y\Leftrightarrow\{x|x\in X\wedge\neg x\in Y\}\Leftrightarrow X\cap Y^c$$
+Similarly $$Y\setminus X\Leftrightarrow Y\cap X^c$$
+$$ X\bigtriangleup Y=(X\setminus Y)\cup (Y\setminus X)=(X\cap Y^c)\cup(Y\cap X^c)=(X\cup Y)\cap(X^c\cup Y^c) $$
+$$(X\bigtriangleup Y)\bigtriangleup Z=((X\bigtriangleup Y)\cup Z)\cap((X\bigtriangleup Y)^c\cup Z^c) $$
+$$=(((X\cup Y)\cap(X^c\cup Y^c))\cup Z)\cap(((X^c\cup Y)\cap(X\cup Y^c))\cup Z^c)$$
+$$=(X\cup Y \cup Z)\cap(X^c\cup Y \cup Z)\cap(X\cup Y^c \cup Z)\cap(X\cup Y \cup Z^c)$$
+Since its symmetric about $X,Y,Z,$,similarly,
+$$X\bigtriangleup(Y\bigtriangleup Z)=(X\cup Y \cup Z)\cap(X^c\cup Y \cup Z)\cap(X\cup Y^c \cup Z)\cap(X\cup Y \cup Z^c)$$
+$$\therefore (X\bigtriangleup Y)\bigtriangleup Z=X\bigtriangleup(Y\bigtriangleup Z)$$ 
+\item
+$$X\cap(Y\bigtriangleup Z)=X\cap((Y\setminus Z)\cup(Z\setminus Y))=(X\cap(Y\setminus Z))\cup(X\cap(Z\setminus Y))$$
+$$=((X\cap Y)\setminus(X\cap Z))\cup((X\cap Z)\setminus(X\cap Y))$$
+$$(X\cap Y)\bigtriangleup(X\cap Z)=((X\cap Y)\setminus(X\cap Z))\cup((X\cap Z)\setminus(X\cap Y))$$
+$$\therefore X\cap(Y\bigtriangleup Z)=(X\cap Y)\bigtriangleup(X\cap Z)$$
+\end{enumerate}
+\section{Q7}
+\begin{enumerate}[(i)]
+\item
+$$x\in X\bigtriangleup Y=\{x|x\in (A\setminus B)\cup (B\setminus A)\}\Leftrightarrow\{x|(x\in A \wedge\neg x\in B)\vee(x\in B \wedge\neg x\in A)\}$$
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+$A(x)$ & $B(x)$ &$A(x)\wedge\neg B(x)$  &$B(x)\wedge\neg A(x)$ &$A(x)\oplus B(x)$ &$x\in X\bigtriangleup Y$ \\ \hline
+T & T &F  &F  &F  &F\\ \hline
+T & F &T  &F  &T  &T \\ \hline
+F & F &F  &F  &F  &F\\ \hline
+F & T &F  &T  &T  &T\\ \hline
+\end{tabular}
+\caption{Truth Table}
+\end{table}
+$$\therefore x\in X\bigtriangleup Y\Leftrightarrow A(x)\oplus B(x) $$
+\item
+$$\neg((A(x)\cap B(x))\cup(\neg A(x)\cap\neg B(x)))\Leftrightarrow A(x)\oplus B(x)$$
+\item 
+It's a valid argument because $(A(x)\oplus B(x))\wedge(B(x)\oplus C(x))\Rightarrow \neg(A(x)\oplus C(x))$ is always true according the following truth table.
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|c|c|c|c|c|c|}
+\hline
+$A$ & $B$ &$C$  &$A(x)\oplus B(x)$&$B(x)\oplus C(x)$&$(A(x)\oplus B(x))\wedge(B(x)\oplus C(x))$&$\neg(A(x)\oplus C(x))$ \\ \hline
+T & T &T  &F  &F&F  &T\\ \hline
+T & T &F  &F  &T&F  &F \\ \hline
+T & F &T  &T  &T&T  &T\\ \hline
+T & F &F  &T  &F&F  &F\\ \hline
+F & T &T  &T  &F&F  &F\\ \hline
+F & T &F  &T  &T&T  &T \\ \hline
+F & F &T  &F  &T&F  &F\\ \hline
+F & F &F  &F  &F&F  &T\\ \hline
+\end{tabular}
+\caption{Truth Table}
+\end{table}
+\end{enumerate}
+\section{Q8}
+$$\exists x(P(x)\Rightarrow Q(x))\Leftrightarrow\exists x(\neg P(x)\vee Q(x))\Leftrightarrow\exists x\neg P(x)\vee \exists xQ(x)$$
+$$\Leftrightarrow(\neg\forall xP(x))\vee(\exists xQ(x))\Leftrightarrow(\forall xP(x))\Rightarrow(\exists xQ(x))$$
+$$\therefore \exists x(P(x)\Rightarrow Q(x))\Leftrightarrow(\forall xP(x))\Rightarrow(\exists xQ(x))$$
+
+\section{Q9}
+$$T=(A\cap B)\cup((M\setminus A)\cap(M\setminus B))=(A\cap B)\cup(M\setminus(A\cup B))$$
+$$M\setminus T=(M\setminus(A\cap B))\cap(A\cup B)\supseteq(M\setminus(A\cap B))\cap B$$
+$$= ((M\setminus A)\cup (M\setminus B))\cap B\supseteq (M\setminus A)\cap B$$
+$$\therefore (M\setminus A)\cap B\subseteq M\setminus T$$
+\section{Q10}
+\begin{enumerate}[(i)]
+\item
+The truth tables:
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|c|c|}
+\hline
+$A$ & $B$ &$A|B$ &$A\downarrow B$\\ \hline
+T & T &F  &F  \\ \hline
+T & F &T  &F  \\ \hline
+F & T &T  &F  \\ \hline
+F & F &T  &T  \\ \hline
+\end{tabular}
+\caption{Truth Table}
+\end{table}
+\item
+$$A\wedge B\equiv (A|B)|(A|B)$$
+$$A\vee B\equiv(A|A)|(B|B)$$
+$$A\Rightarrow B\equiv A|(A|B)$$
+$$A\Leftrightarrow B\equiv[A|(A|B)]|[B|(B|A)]|[A|(A|B)]|[B|(B|A)]$$
+\item
+$$A\wedge B\equiv(A\downarrow A)\downarrow(B\downarrow B)$$
+$$A\vee B\equiv(A\downarrow B)\downarrow(A\downarrow B)$$
+$$A\Rightarrow B\equiv [(A\downarrow B)\downarrow B]\downarrow[(A\downarrow B)\downarrow B]$$
+$$A\Leftrightarrow B\equiv[(A\downarrow B)\downarrow B]\downarrow[(B\downarrow A)\downarrow A]$$
+\item No
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+$A$ & $B$ &$C$ &$A\downarrow (B\downarrow C)$&$(A\downarrow B)\downarrow C$\\ \hline
+T & T &T  &F &F  \\ \hline
+T & T &F  &F &T \\ \hline
+T & F &T  &F &F \\ \hline
+T & F &F  &F &T \\ \hline
+F & T &T  &T &F \\ \hline
+F & T &F  &T &T \\ \hline
+F & F &T  &T &F \\ \hline
+F & F &F  &F &F \\ \hline
+\end{tabular}
+\caption{Truth Table}
+\end{table}
+\item
+I can prove it through truth tables
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+$A$ & $B$ &$C$ &$(\neg A)\downarrow B$ &$A|C$&$(\neg A)\downarrow B\wedge A|C$ &$B\downarrow C$\\ \hline
+T & T &T  &F &F &F&F  \\ \hline
+T & T &F  &F &T &F&F\\ \hline
+T & F &T  &T &F &F&F\\ \hline
+T & F &F  &T &T &T&T\\ \hline
+F & T &T  &F &T &F&F\\ \hline
+F & T &F  &F &T &F&F\\ \hline
+F & F &T  &F &T &F&F\\ \hline
+F & F &F  &F &T &F&T\\ \hline
+\end{tabular}
+\caption{Truth Table}
+\end{table}
+$((\neg A)\downarrow B\wedge A|C)\Rightarrow B\downarrow C$ is true, so,it's valid
+\end{enumerate}
+\end{document}

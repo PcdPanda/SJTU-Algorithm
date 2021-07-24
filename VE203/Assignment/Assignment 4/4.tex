@@ -1,0 +1,117 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{geometry}
+\usepackage{enumerate}
+\usepackage{natbib}
+\usepackage{float}%稳定图片位置
+\usepackage{graphicx}%画图
+\usepackage[english]{babel}
+\usepackage{a4wide}
+\usepackage{indentfirst}%缩进
+\usepackage{enumerate}%加序号
+\usepackage{multirow}%合并行
+\title{\large UM-SJTU JOINT INSTITUTE\\DISCRETE MATHEMATICS\\(VE203)\\\ \\\ \\\ \\\ \\\ \\\ \\\ \\\ \\\ \\\ \\\
+ASSIGNMENT 4\\\ \\\ \\\ \\\ \\\ \\\ }
+\author{Name: Pan Chongdan\\ID: 516370910121}
+\date{Date: \today}
+
+
+\begin{document}
+\maketitle
+\newpage
+\section{Q1}
+\begin{enumerate}[(i)]
+\item (147)(258)(036),the order is 3
+\item (014)(28)(36),the order is 6
+\item (132)(45),the order is 6
+\item (13)(56),the order is 2
+\end{enumerate}
+\section{Q2}
+\begin{enumerate}[(i)]
+\item (1256)(12439)=(16)(15)(29)(23)(24),it's odd.
+\item (08)(06)(04)(02)(19)(17)(15)(13),it's even.
+\item (0124)(2198)(132568)=(04)(06)(05)(02)(03)(01)(89),it's odd.
+\item (120)(94567)(0427)=(04)(09)(02)(01)(07)(06)(05),it's odd.
+\end{enumerate}
+\section{Q3}
+According to principle of induction:
+$\begin{pmatrix}
+1\\0
+\end{pmatrix}=
+\begin{pmatrix}
+1\\1
+\end{pmatrix}
+=1=\dfrac{1!}{1!0!}=\dfrac{n!}{(n-k)!k!}$
+\par
+$\begin{pmatrix}
+n+1\\k
+\end{pmatrix}=\begin{pmatrix}
+n\\k
+\end{pmatrix}+\begin{pmatrix}
+n\\k-1
+\end{pmatrix}=
+\dfrac{n!}{(n-k)!k!}+\dfrac{n!}{((n-k+1)!(k-1)!}$
+\par$=\dfrac{n!}{(n-k)!(k-1)!}(\dfrac{1}{k}+\dfrac{1}{n-k+1})=\dfrac{n!}{(n-k)!(k-1)!}\times\dfrac{n+1}{k(n-k+1)}=\dfrac{(n+1)!}{(n+1-k)!k!}$	
+\section{Q4}
+$$56-8m-n=31$$
+$$m+n=4$$
+$$m=3,n=1$$
+$$\begin{pmatrix}
+7\\m
+\end{pmatrix}\times\begin{pmatrix}
+56-8m\\n
+\end{pmatrix}=1120$$
+\section{Q5}
+$$a_n=\begin{pmatrix}
+9\\n
+\end{pmatrix}\times(\dfrac{4}{3})^n$$
+The biggest term is $a_5=\frac{14336}{27}$
+\section{Q6}
+According to the principle of induction:
+$|S_1|=1$, assume $|S_n|=n!$, and $f_1(x)$ is an arbitrary element of $S_n$ 
+\begin{eqnarray}f_1(x)=
+\begin{cases}
+f(k_i)=k_{i+1} ,i<m\cr f(k_m)=k_1, \cr f(x)=x, &x\notin k_i\cup k_m\end{cases}
+\end{eqnarray}
+\par Assume the n+1 element is $S$ and there are $ax$ such that $f(x_a)=x_a$.It's obvious that $a+m=n$.   
+If we let f(s)=s, there is one way. If we let $f(x_a)=S$ and $f(S)=x_a$ there are $a$ ways. If we let $f(k_i)=S$ and $f(S)=k_{i+1}$ there are $m_1$ ways. If we let $f(k_m)=S$ and $f(S)=k_1$, there is one way. So there are total n+1 ways. So for any cycle, it can become $n+1$ new different cycles. So $|S_{n+1}|=|S_{n}\times (n+1)|\therefore |S_{n+1}|=n+1$
+\section{Q7}
+\begin{enumerate}[(i)]
+\item Assume there is another identity $f$, then $e\cdot f=f=e$ but $f\neq e$, so $f$ doesn't exist.
+\item $\forall x$, assume there exists another inverse $x^{-2}$, then $(x^{-1}\cdot x)\cdot x^{-2}=x^{-2}\because (x^{-1}\cdot x)\cdot x^{-2}=x^{-1}\cdot(x\cdot x^{-2})=x^{-1}$
+So $x^{-1}=x^{-2}$, which is a contradiction. 
+\end{enumerate}
+\section{Q8}
+\begin{enumerate}[(i)]
+\item $\forall$ 2-cycle $(ab)$, it can be represented as the product of an odd number of adjacent 2-cycles.If $a<b$,then
+$$(ab)=[b(b-1)][(b-1)(b-2)]\cdots[(a+2)(a+1)][a(a+1)][(a+1)(a+2)]\cdots[(b-2)(b-1)][(b-1)b]$$ 
+Since the product of two odd number is odd and the product of an odd number and an even number is even,so if $\sigma$ can be written as a product of an even number of 2-cycles, then $\sigma$ can be written as an even number of adjacent
+2-cycles. 
+\item if $\sigma(m)=p$,let $(pq)\sigma=\sigma_1$ then $\sigma_1 (m)=\sigma(m)+1=q$, similarly, if $\sigma(n)=q$, then $\sigma_1(n)=\sigma(n)-1=p$.
+\\ if $m>n$ then $(m,n)\in\{(k,l)\in[n]\times[n]|(k<l)\wedge(\sigma(l)<\sigma(k))\}$ and $(m,n)\notin\{(k,l)\in[n]\times[n]|(k<l)\wedge(\sigma_1(l)<\sigma_1(k))\}\therefore P(\sigma_1)=P(\sigma)-1$ 
+\\if $m<n$,$P(\sigma_1)=P(\sigma)+1$
+\\if $m,n$ both don't exist, then $(p,q)\notin\{(k,l)\in[n]\times[n]|(k<l)\wedge(\sigma_1(l)]\sigma_1(k))\}\therefore P(\sigma_1)=P(\sigma)+1$   
+\\So $P((pq)\sigma)=P(\sigma)\pm1$ 
+\item Assume $\sigma$ is both even and odd then 
+$$\sigma=a_1\cdot a_2\cdot...\cdot a_m=b_1\cdot b_2\cdot...\cdot b_n$$
+where m is odd and n is even
+\\$\sigma^{-1}=b_n\cdot b_{n-1}\cdot...\cdot b_1$
+\\$e=\sigma \cdot \sigma^{-1}=a_1\cdot a_2\cdot...\cdot a_m \cdot b_n\cdot b_{n-1}\cdot...\cdot b_1$,so $e$ is odd, which is a contradiction.
+\item Since $e$ is even, $e\in A_n$, $\forall$ bijection $B\in A_n$ if we change $f(x)=y$ then we exchange all pairs of $x,y$ in $B$ and forms a new bijection $b$, which is also even. $\therefore B^{-1}=b\in A_n$, $A_n$ is a subgroup of $S_n$
+\item  $\forall$ even $\sigma \in S_n,\sigma=a_1\cdot a_2\cdot...\cdot a_m$,m is even,$\sigma_1=(01)\cdot a_1\cdot a_2\cdot...\cdot a_m$ is odd, and it's a bijection between $\sigma$ and $\sigma_1$. Since $\sigma_1\in S_n$, the number of even $\sigma$ and odd $\sigma$ is same in $S_n$.
+\par $\therefore |A_n|=\frac{|S_n|}{2}=\frac{n!}{2}$
+\end{enumerate}
+\section{Q9}
+\begin{enumerate}[(i)]
+\item $$y^4=y^2\cdot y^2=xyx^{-1}\cdot xyx^{-1}=xy^2x^{-1}=x^2yx^{-2}$$
+$$y^8=y^4\cdot y^4=x^2yx^{-2}\cdot x^2yx^{-2}=x^2y^2x^{-2}=x^3yx^{-3}$$
+Similarly, $$y^{16}=x^4yx^{-4},y^{32}=x^5yx^{-5}$$
+\item $$yx^{-5}=y^{32}$$
+$$yx^{-5}x^5=y^{32}x^5$$
+$$y=y^{32}$$
+If $y's$ order is $n<31$ then $y^n=e,x^5yx^{-5}=y=y^{32-n}\Rightarrow y^{31-n}=e$
+\\$\therefore (n<16)\wedge(n|(31-n))\Rightarrow n=1$
+\\$\because y\neq1\therefore n=32$ and $y$'s order is 31.
+\end{enumerate}
+\end{document}

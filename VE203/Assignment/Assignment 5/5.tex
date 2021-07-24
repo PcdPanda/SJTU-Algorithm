@@ -1,0 +1,120 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{geometry}
+\usepackage{enumerate}
+\usepackage{natbib}
+\usepackage{float}%稳定图片位置
+\usepackage{graphicx}%画图
+\usepackage[english]{babel}
+\usepackage{a4wide}
+\usepackage{indentfirst}%缩进
+\usepackage{enumerate}%加序号
+\usepackage{multirow}%合并行
+\title{\large UM-SJTU JOINT INSTITUTE\\DISCRETE MATHEMATICS\\(VE203)\\\ \\\ \\\ \\\ \\\ \\\ \\\ \\\ \\\ \\\ \\\
+ASSIGNMENT 5\\\ \\\ \\\ \\\ \\\ \\\ }
+\author{Name: Pan Chongdan\\ID: 516370910121}
+\date{Date: \today}
+
+
+\begin{document}
+\maketitle
+\newpage
+\section{Q1}
+\begin{enumerate}[(i)]
+\item $e\cdot x^{-1}\in H\Rightarrow x^{-1}\in H$
+\item $y^{-1}\in H\Rightarrow x\cdot (y^{-1})^{-1}\in H\Rightarrow x\cdot y\in H$
+\end{enumerate}
+\section{Q2}
+\begin{enumerate}
+\item\{e\}\item\{e,(01)(23)\}\item\{e,(02)(13)\}\item\{e,(13)\}\item\{e,(30)(12)\}\item\{e,(20)\}
+\item \{e,(0123),(0321)\}\item\{e,(01)(23),(02)(13),(13),(30)(12),(20),(0123),(0321)\}
+\item \{e,(01)(23),(02)(13),(30)(12))\} \item\{e,(20)(13),(0123),(0321)\}
+\end{enumerate}
+\section{Q3}
+$G$'s order is 10 $\Rightarrow \forall g\in G, g^{10}=e\Rightarrow (g^5)^2=e $
+\par $\because g^5\in G\therefore g^5$'s order is 2.
+\section{Q4}
+$(G,\cdot)=S_n$,where n is infinite
+$\forall m,(012\cdots m)^m=e$
+\section{Q5}
+$\textbf{(0123)}^{-1}=\textbf{(3210)},\textbf{(01)}(0123)=\textbf{(123)},(01)(3210)=\textbf{(203)},(203)(123)=\textbf{(310)}$
+\\ $(123)(203)=\textbf{(012)},(123)^{-1}=\textbf{(132)},(203)^{-1}=\textbf{(023)},(310)^{-1}=\textbf{(301)},(012)^{-1}=\textbf{(021)}$
+\\ $(01)(310)=\textbf{(30)},(01)(301)=\textbf{(31)},(01)(012)=\textbf{(12}),(01)(021)=\textbf{(02)}$ 
+\\ $(02)(310)=\textbf{(3120)},(3120)^{-1}=\textbf{(0213)},(02)(301)=\textbf{(3201)},(3201)^{-1}=\textbf{(1023)},(02)(023)=\textbf{(23)},\textbf{(01)(23)},\textbf{(02)(13)},\textbf{(03)(12)},\textbf{e}$
+\par So there are total 24=4! elements in <(0123),(01)> and it's equal to $S_4$
+\section{Q6}
+Assume $a=(01)(02)=\textbf{(021)},b=\textbf{(01)(23)},a^{-1}=\textbf{(012)},a\cdot b=\textbf{(123)}$
+\\$(123)^{-1}=\textbf{(321)},(01)(23)=\textbf{(013)},(013)^{-1}=\textbf{(031)}$
+\\$(01)(23)(031)=\textbf{(023)},(023)^{-1}=\textbf{(032)},(012)(013)=\textbf{(13)(02)},(012)(032)=\textbf{(03)(12)},\textbf{e}$
+\\There are total 12 elements for $A_4$, so there exists
+\section{Q7}
+\begin{enumerate}
+\item 
+\par Assume $ghg^{-1}\notin H,a\in H,(ghg^{-1})a=b\in H$
+\\Then $(ghg^{-1})aa^{-1}=ba^{-1}=ghg^{-1}$
+\\$\because ba^{-1}\in H\therefore$ there is a contradiction for $ghg^{-1}\notin H$ if $(ghg^{-1})a\in H$
+\\$\therefore (ghg^{-1})a\notin H\Rightarrow (ghg^{-1})H\neq H$
+\\$\because (ghg^{-1})=(gH)\star(hH)\star(g^{-1}H)=(gH)\star(g^{-1}H)=eH=H$
+\\So $\star$ is invalid if $ghg^{-1}\notin H$ and $H$ must be normal
+\\If $H$ is normal and $\star$ is valid:
+\\$[(aH)\star(bH)]\star(cH)=(a\cdot b)H\star(cH)=[(a\cdot b)\cdot c]H$
+\\$(aH)\star[(bH)\star(cH)]=aH\star[(b\cdot c]H)=[a\cdot(b\cdot c)]H=[(a\cdot b)\cdot c]H$
+\\$\therefore [(aH)\star(bH)]\star(cH)=(aH)\star[(bH)\star(cH)]$
+\\$\star$ is associative of $X$
+\\$(aH)\star(eH)=(a\cdot e)H=aH$
+\\$eH$ is the identify of $X$
+\item Assume $G=S_3,H=S_2,g=(02),h=(01)\Rightarrow ghg^{-1}=(02)(01)(02)=(21)\notin H$
+\\$(02)H=(012)H=\{(02),(012))\},(21)H=(021)H=\{(12),(021)\}$\\
+\\According to the definition of $\star, (02)H\star (21)H=(021)H,(012)H\star(021)H=H$, which is a contradiction and $\star$ is not a function
+\\So $(X,\star)$ is not a group.
+\end{enumerate}
+\section{Q8}
+\begin{enumerate}[(i)]
+\item When n=1,it's clear that $ab=ab$,assume $(ab)^m=a^mb^m$
+\\when n=m+1,$(ab)^{m+1}=a^mb^mab=a^mb^{m-1}ab^2=\cdots =a^{m+1}b^{m+1}$
+\\$\therefore (ab)^n=a^nb^n$
+\item $\forall a,b\in H$, assume $a,b$'s order are $m,n.$
+\\$(ab)^{mn}=a^{mn}b^{mn}=e^(n+m)=e\Rightarrow ab\in H,(ab)^{-1}=(ab)^{mn-1}$.
+\\$\because (ab)^{mn-1}=a^{mn-1}b^{mn-1}\therefore (ab)^{mn-1}\in H$
+\\$\therefore H$ is a group and $H\leq G$
+\end{enumerate}
+\section{Q9}
+\begin{enumerate}
+\item $$e=\begin{pmatrix}
+1&0\\0&1
+\end{pmatrix}$$
+$$A^2=\begin{pmatrix}
+-1&-1\\1&0
+\end{pmatrix}$$
+$$A^3=\begin{pmatrix}
+1&0\\0&1
+\end{pmatrix}=e$$
+A's order is 3
+\item 
+$$B^2=\begin{pmatrix}
+-1&0\\0&-1
+\end{pmatrix}$$
+$$B^4=\begin{pmatrix}
+1&0\\0&1
+\end{pmatrix}=e$$
+B's order is 4
+\item 
+Assume 
+$$C=A\cdot B=\begin{pmatrix}
+1&0\\-1&1
+\end{pmatrix}$$
+$$C^n=\begin{pmatrix}
+1&0\\-n&1
+\end{pmatrix}$$
+$$C^n*C=\begin{pmatrix}
+1&0\\-n&1
+\end{pmatrix}\times\begin{pmatrix}
+1&0\\-1&1
+\end{pmatrix}=\begin{pmatrix}
+1&0\\-(n+1)&1
+\end{pmatrix}$$
+$\therefore A\cdot B$ has infinite order.
+\end{enumerate}
+
+\end{document}

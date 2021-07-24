@@ -1,0 +1,12 @@
+clear all,clc;
+t0=[3e-6 4e-6 2.7e-5 1.1e-4 1.7e-3 0.0057 0.053 1.4 24];
+t1=[1e-6 3e-6 1.4e-5 5.4e-5 8.1e-4 0.0011 0.018 0.45 7.2];
+t2=[1e-6 3e-6 1.7e-5 6.3e-5 9e-4 0.0011 0.019 0.46 7.2];
+t3=[1e-6 5e-6 1.8e-5 4.8e-5 2e-4 1.4e-4 5.6e-4 0.0033 0.015];
+t4=[1e-6 4e-6 1.9e-5 4.3e-5 2.1e-4 1.6e-4 6.5e-4 0.0036 0.016];
+t5=[1e-6 4e-6 1.7e-5 3.7e-5 2e-4 1.4e-4 5.6e-4 0.0032 0.014];
+size=[1 10 50 100 500 1000 5000 25000 100000];
+semilogy(size,t0,'d-',size,t1,'*-',size,t2,'o-',size,t3,'v-',size,t4,'>-',size,t5,'^-');
+xlabel('array size');
+ylabel('time');
+legend('bubble sort','insertion sort','selection sort','merge sort','quick sort not in-place','quick sort in-place');
