@@ -1,0 +1,43 @@
+Author: Pan Chongdan
+ID: 516370910121
+Date  : November 28, 2016
+
+COMPILING:
+For command line, run 
+
+g++ -Wall -pedantic main.cpp ex1.cpp ex2.cpp ex3.cpp ex4.cpp -o out
+
+g++ is the compiler for cpp. This course allow C++ 2011 standard. 
+
+ex1:
+Input: The current year. your current age, another year
+Output: Your age in second year.
+
+ex2:
+Input:
+The menu: 
+If you enter U the funtion will change dollars to RMB,if you enter R it will change RMB to dollars,else the function is invalid.
+The amount of your currency and the precision
+Output:
+The corresponding amount.The precision will omit the last zeros.
+
+ex3
+Input:
+A file including the two matrixes
+Note the number of lines and rows must be same or the product or the sum will be meaningless.
+
+Output:
+The sum, product and transpose output in a file called result
+
+Algorithm:
+The function will read the matrixes by using string and two-dimension array.
+
+ex4 
+Input:
+First enter 1 or 2 to choose which function to run.
+For function 1,you should enter a positive integer.
+For function 2,you should enter an upper bound M.
+
+Output:
+The function 1 will return N that UN=1.
+The function willo return a positive integer a whose n is biggest.

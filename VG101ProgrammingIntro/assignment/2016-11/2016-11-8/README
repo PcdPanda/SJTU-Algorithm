@@ -1,0 +1,82 @@
+README
+
+Author: Pan Chongdan 
+ID:516370910121
+Date: NOV,14 2016
+
+USAGE AND COMPLING:
+For command line, run 
+gcc -Wall main.c ex1.c ex2.c ex3.c ex4.c ex5.c -o out
+
+Ex1:
+Input:
+A positive integer n.
+
+Output:
+All the primes less than the integer.
+
+Algorithm:
+The function will generate an arry which contains every positive integer smaller than n.
+Then it will judge whether every number is a prime by using a loop.
+If the number isn't a prime, it will be removed from the array and the remaining array will be the output.
+
+Ex2:
+Input:
+A number represent for the month number and the name of the first day in lower case.
+
+Output:
+The calender of the month.
+
+Note that there is 28 days in February in the function
+
+Algorithm:
+The function will calculate how many days in the month by knowing the month number.
+Then it will compare the string representing for the name of the first day to generate the calender.
+
+Ex3:
+Input:
+Nothing,just press the enter when the decks need to be displayed
+
+Output:
+Three decks.
+The first and last one is represented in the correct order.
+The second one is represented in a random order.
+
+Note that the first character of the card represent for the suit and the second character is the number.
+
+Alogrithm:
+The function use a struct to contain the suit and number of each card.
+It can generate a random deck by exchange every card in it randomly.
+
+Ex4:
+Input:
+A sentence and a string which you want to find in the sentence
+
+Output:
+How many times does the string occur in the sentence
+
+Algorithm:
+The function will calculate the number by comparing character one by one. 
+
+Ex5:
+Author:
+Pan Chongdan
+ID:516370910121
+Su Xingyu
+ID£º516021910560
+
+Input:
+Nothing.
+
+Output:
+The product of two random numbers.
+
+Karatsuba algorithm:
+A fast multiplication algorithm.To calculate the product of X and Y, we choose an integer m such that 
+X=a*(10^m)+b, Y=c*(10^m)+d.(Note that b and d is smaller than d)Then e=a*c and f=b*d.
+Next, we can assume x is equal to the number before the mth digit of the X plus the rest of X.
+So we can calculate z=x+y-e-f
+Finally the product is e*(10^2m)+z*(10^m)+f
+
+Specific adjustments:
+Use recursion instead of original iteration loop to calculate the binary digital number

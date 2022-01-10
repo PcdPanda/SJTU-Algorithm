@@ -1,0 +1,10 @@
+Moving disc 3 from Peg 1 to Peg 2
+Moving disc 2 from Peg 1 to Peg 3
+Moving disc 1 from Peg 1 to Peg 2
+Moving disc 1 from Peg 1 to Peg 2
+Moving disc 1 from Peg 1 to Peg 2
+Moving disc 1 from Peg 1 to Peg 2
+Moving disc 2 from Peg 3 to Peg 2
+Moving disc 1 from Peg 1 to Peg 2
+Moving disc 1 from Peg 1 to Peg 2
+Moving disc 1 from Peg 1 to Peg 2

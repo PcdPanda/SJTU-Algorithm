@@ -1,0 +1,4 @@
+Name:Pan Chongdan
+Student ID:516370910121
+In ex1 I built the main function about the input and output. I was also reponsible for how to organize the car and the park.
+In ex2 I also built the main function and write the function about how to generate the random slot,UFO and Rocket.

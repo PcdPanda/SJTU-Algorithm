@@ -1,0 +1,41 @@
+README
+
+Author: VG101 SU16 TA_Group
+Date  : July 15, 2016
+
+Dear all:
+
+Welcome to the last part of this course. This is the cpp homework
+template. The basic use of the files remains unchanged. 
+
+Please note:
+In CPP you will encounter rather large project. Project don't need 
+to comply to this homework template. 
+
+In CPP there exists a very unique techique, also named "template", 
+in this file, "template" means "homework template".
+
+USAGE:
+Write your corresponding exercise in the CPP files. Note that the file 
+extention for cpp source files are usually ".cpp". In real life you might
+also find some cpp source files ends with ".cc" or ".cx". We stick to ".cpp".
+Header files still ends with ".h". However do note that standard library header
+files don't ends with ".h".  Also, C standard library headers all have thier
+own cpp version, such as "stdlib.h" becomes "cstdlib".
+
+COMPILING:
+For command line, run 
+
+g++ -Wall -pedantic main.cpp ex1.cpp ex2.cpp ex3.cpp ex4.cpp -o out -lfreeglut -lopengl32
+
+g++ is the compiler for cpp. This course allow C++ 2011 standard. 
+
+Extra information:
+Future notes:
+You will soon begin writing program with OpenGL library. 
+
+Windows user might need to include "windows.h" for the program to compile.
+
+Program with OpenGL would require special compiling commands. 
+We will cover this in future lab.
+

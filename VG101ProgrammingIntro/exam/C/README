@@ -1,0 +1,29 @@
+README
+
+Author: Pan Chongdan 
+ID:516370910121
+Date: NOV,24 2016
+
+USAGE AND COMPLING:
+For command line, run 
+gcc -Wall main.c ex1.c ex2.c ex3.c ex4.c ex5.c ex6.c -o out
+
+Ex1:
+Input:
+n=The number of trapeziums
+(i,j):The position of the trapezium
+Output:
+The biggest area of the trapezium and those around it
+
+Ex2:
+Input:
+The number of disk
+Output:
+The moves number and a txt file about how to move
+
+Ex3:
+Input:
+The integer n
+
+Output:
+The nth Cantor number

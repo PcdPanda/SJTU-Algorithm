@@ -1,0 +1,60 @@
+README
+
+Author: Pan Chongdan 
+ID:516370910121
+Date: NOV,6 2016
+
+USAGE AND COMPLING:
+For command line, run 
+gcc -Wall main.c ex1.c ex2.c ex3.c ex4.c ex5.c -o out
+
+Ex1:
+Input:
+The coefficients of the real part and the imaginary part of the two complex numbers and the operation symbols like * and +
+
+Output:
+The product or sum of the two complex numbers.
+
+You need to enter the coefficients of the real part and the imaginary part of the two complex numbers orderly as the requirement.
+For example, if you enter 1 2 3 4 + orderly,the function will calcuate the sum of 1+2i and 3+4i and print 4+6i.
+For example, if you enter 1 2 3 4 * orderly,the function will calcuate the product of 1+2i and 3+4i and print -5+10i.
+The function will provide you with instruction about what to enter.
+
+Ex2:
+Input:
+Two positive integers
+
+Output:
+Their GCD
+
+Algorithm:
+Use a recusion function.First,assume the GCD is the bigger integer,then keeping calculating the remainder and decreasing the GCD until it can
+be divided by 2 integers with no remainder.
+
+Ex3:
+Input:
+A letter or a digit
+
+Output:
+If you input a letter,then it will output whether the letter is a vowel.
+If you enter a digit, the function 3 will require you to enter a b or B again as a unit and print the correspoding data types
+
+The function uses ASCII code to distinguish digits from letters
+
+Ex4:
+Input:
+The three coefficients of a quadratic equation
+
+Output:
+The real roots of the equation
+
+The function uses formula for roots to calculate the roots.
+
+Ex5:
+Input:
+Two numbers
+
+Output:
+Two numbers with their values exchanged
+
+The function will print the process of changing their values without any temporary variable.

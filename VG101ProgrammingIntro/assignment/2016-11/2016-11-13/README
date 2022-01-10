@@ -1,0 +1,97 @@
+README
+
+Author: Pan Chongdan 
+ID:516370910121
+Date: NOV,20 2016
+
+USAGE AND COMPLING:
+For command line, run 
+gcc -Wall main.c ex1.c ex2.c ex3.c ex4.c ex5.c ex6.c -o out
+
+Ex1:
+Input:
+None.
+
+Output:
+The Cartesian number will be output in the form of Polar coordinate and the Polar coordinate ones are vice versa.
+
+Explanation about my struct:
+For Cartesian, I use r and i to represent the real part and imaginary part
+For polar coordinate, I use r and a to represent the absoluate value and the complex angle of the number
+I think the Cartesian is better because it is more clear and coomplex angle is not convenient when it is k*M_PI
+For data types, I choose float because it's more precisely and the value of trigonometric functions are oftern decimals
+
+
+Algorithm:
+The function uses trigonometric functions to convert complex numbers between different forms.
+
+Ex2:
+Input:
+The number of input integers and a string including the integers separated by spaces
+
+Output:
+The numbers of valid numbers and spaces. The max number, the random number and the input numbers which are larger than the random number.
+
+Algorithm:
+The function use pointers and ASCII code to find spaces in the string and the numbers.
+
+Ex3:
+Input:
+Two txt files called sentence and word and include them. 
+
+Output:
+A txt file called count showing how many times the word occurs in the sentence
+
+Alogrithm:
+The function uses different kinds of pointers to read string from files and output them to a file.
+
+Ex4:
+Input:
+A file including the two matrixes
+Note the number of lines and rows must be same or the product or the sum will be meaningless.
+
+Output:
+The sum, product and transpose output in a file called result
+
+Algorithm:
+The function will read the matrixes by using pointers and two-dimension array.
+It also uses algorithm in Ex2 to find the space in the string 
+
+Ex5:
+Input:
+Nothing. You can use functions as required in the main function.I also wrote a function called print to help know the elements in the set.
+There has been an example in the main function
+
+Output:
+If you use print function, it will print all the elements in the set
+
+Ex6:
+Author:
+Pan Chongdan ID:516370910121
+Responsible for IsEmptyList,SearchList,MergeList
+
+Yang jiaxin  ID:516370910205
+Responsible for InsertLastList,DeleteFirstList,DeleteLastList
+
+Yan Lihao    ID:516021910715
+Responsible for InsertFirstList,SizeList,SplitList
+
+1£º
+(a):
+A linked list is a linear collection of data elements, called nodes, each pointing to the next node by means of a pointer. 
+It is a data structure consisting of a group of nodes which together represent a sequence.
+
+(b):
+Josephus problem, the calculation of polynomial£¬memory manangement in operating system
+
+(c):
+Singly linked list, doubly linked list, multiply linked list, circular linked list
+
+Input:
+Nothing.
+
+Output:
+The element of the linked list as required.
+
+Algorithem:
+The function use pointers and structs of nodes to operate on a linked list.

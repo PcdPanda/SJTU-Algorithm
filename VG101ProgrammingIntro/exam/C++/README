@@ -1,0 +1,44 @@
+README
+
+Author: 
+Pan Chongdan 	516370910121
+
+Date : Dec 13, 2016
+
+COMPILING:
+Refer to makefile
+
+Ex1.cpp:
+Intput: None;
+Output: A moving prince walking into a castle
+
+
+About headfile
+In figures.h I defined
+Class vector
+Class figure
+(an abstract class)
+Class coloredfig
+(which is inherited from figure)
+Class triangle/rectangle/circle/line/orthogon/quad
+(which is inherited from coloredfig)
+(Every basic figure has method of draw/zoom/rotate/move)
+In group.h we defined
+Class group
+(an abstract class)
+Class castle and prince
+(which is inherited from group)
+(These objects can move by making every figures which from it move.)
+
+Ex2.cpp:
+Intput: None;
+Output: A txt file called ex2.txt
+
+About headfile
+in ex2.h I defined
+Class Creature(abstract)
+Class prince,princess and monster derived from Creature
+Class Castle,Room
+Class Material(abstract)
+Class Potion,Die,Weapon derived from Material
+Class Knife,Sword derived from Weapon
